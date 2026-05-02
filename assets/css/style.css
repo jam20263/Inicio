@@ -1,0 +1,374 @@
+/* --- RESETEO BÁSICO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    background-color: #ffffff; /* Cuerpo blanco */
+}
+
+/* --- CABECERA CON DEGRADADO --- */
+.hero-header {
+    width: 100%;
+    min-height: 100vh;
+    /* Este es el degradado que se perdía por el nombre de la clase */
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 60px 20px;
+    color: white;
+}
+
+/* Centrado y alineación del texto */
+.hero-content {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+/* --- ESTILOS DE ELEMENTOS --- */
+.header-label {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 99px;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-title {
+    font-size: clamp(2rem, 5vw, 3.5rem); /* Tamaño fluido para móviles */
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.header-title-light {
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.header-descriptions {
+    margin-bottom: 40px;
+}
+
+.header-descriptions p {
+    font-size: 1.1em;
+    opacity: 0.8;
+    margin-bottom: 12px;
+}
+
+.header-button {
+    background-color: #38bdf8;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+}
+
+.arrow-down-icon {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.5;
+}
+
+/* Estilo del cuerpo blanco */
+.cuerpo {
+    padding: 80px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #333;
+}
+
+/* =========================================
+   ESTILOS DE LA SECCIÓN PRINCIPAL (NUEVO)
+   ========================================= */
+
+/* Color y tamaño del título principal de la sección */
+.section-title {
+    color: #0f172a; /* Azul muy oscuro casi negro */
+    font-size: 2.5rem;
+}
+
+/* Estilo para las tarjetas simulando la imagen */
+.custom-card {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid rgba(0,0,0,0.05) !important; /* Borde súper sutil */
+}
+
+/* Efecto al pasar el mouse sobre la tarjeta */
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el cuadrito que encierra el ícono */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #fee2e2; /* Fondo rojizo/rosado muy claro */
+    color: #ef4444; /* Rojo suave para el ícono */
+    border-radius: 10px; /* Bordes redondeados del cuadrito */
+    font-size: 1.3rem; /* Tamaño del ícono */
+}
+
+/* Ajuste del color de los títulos de las tarjetas */
+.card-title {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+/* =========================================
+   ESTILOS DE LA SECCIÓN "QUÉ INCLUYE" (NUEVO)
+   ========================================= */
+
+/* Fondo gris muy claro para separar secciones visualmente */
+.section-light-bg {
+    background-color: #f8fafc; /* Un gris-azulado muy sutil y elegante */
+}
+
+/* Color azul para los iconos de check (coincide con el botón de la cabecera) */
+.check-icon {
+    color: #2563eb; 
+    font-size: 1.25rem;
+}
+
+/* Espaciado entre los elementos de la lista */
+.list-spacing li {
+    margin-bottom: 1rem;
+}
+
+.list-spacing li:last-child {
+    margin-bottom: 0;
+}
+
+/* Hacemos que el texto de la lista sea un poco más oscuro que el gris estándar para mayor legibilidad */
+.text-secondary {
+    color: #475569 !important; 
+}
+
+/* --- ESTILOS PLANES DE SERVICIO --- */
+
+.pricing-card {
+    transition: transform 0.3s ease;
+    border-radius: 16px !important;
+    /* Color de borde gris suave para los planes no destacados */
+    border: 1px solid #e2e8f0 !important; 
+}
+
+/* El plan destacado sigue manteniendo su borde azul */
+.featured-card {
+    border: 2px solid #2563eb !important; 
+    background-color: #f0f7ff;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.featured-card {
+    border-color: #2563eb !important;
+    background-color: #f0f7ff; /* Fondo sutil para destacar */
+}
+
+.plan-list li {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.plan-list i {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.ideal-for {
+    background-color: #f1f5f9;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Caja de icono para extras */
+.icon-box-blue {
+    width: 45px;
+    height: 45px;
+    background-color: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.extras-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+}
+
+/* Ajuste color primario de botones Bootstrap para que coincida con tu diseño */
+.btn-primary {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-outline-primary {
+    color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* --- ESTILOS COTIZADOR --- */
+
+.plan-select {
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    transition: all 0.2s ease;
+}
+
+.plan-select:hover {
+    background-color: #f8fafc;
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.plan-select.active {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+    border-width: 2px;
+}
+
+.result-box {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.1);
+}
+
+/* Estilos para los botones de selección del formulario */
+.btn-check:checked + .btn-outline-primary {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+    color: #2563eb;
+    border-width: 2px;
+}
+
+/* Ajuste fino para etiquetas de formulario */
+.form-label.small {
+    color: #475569;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Efecto hover suave en el botón de enviar */
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+/* --- FOOTER SUPERIOR (LLAMADO A LA ACCIÓN) --- */
+.footer-cta {
+    background-color: #1e50a0; /* Azul medio oscuro */
+    padding: 80px 20px;
+}
+
+.cta-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+/* Botón sólido personalizado */
+.btn-primary-custom {
+    background-color: #0ea5e9; /* Azul más claro y brillante */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+/* --- FOOTER INFERIOR (PRINCIPAL) --- */
+.main-footer {
+    background-color: #3b4758; /* Gris azulado oscuro (Slate) */
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.footer-text, .footer-list {
+    color: #cbd5e1; /* Gris claro para el texto */
+    font-size: 0.95rem;
+}
+
+/* Enlaces del footer */
+.footer-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #ffffff; /* Se ilumina en blanco al pasar el mouse */
+}
+
+/* Iconos de bootstrap dentro del footer */
+.footer-list i {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Línea sutil superior del copyright */
+.border-top-custom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-muted-custom {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* --- COMPORTAMIENTO GENERAL --- */
+html {
+    scroll-behavior: smooth; /* Hace que los enlaces internos se deslicen suavemente */
+}
